@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript">
+function gate(){
+   // ▼ユーザの入力を求める
+   var UserInput = prompt("Enter Pass","");
+   // ▼入力内容をチェック
+   if( /\W+/g.test(UserInput) ) {
+      // ▼半角英数字以外の文字が存在したらエラー
+      alert("Some letters are not supported.");
+   }
+   // ▼キャンセルをチェック
+   else if( UserInput != null ) {
+      // ▼入力内容からファイル名を生成して移動
+      location.href = UserInput + ".html";
+   }
+}
+</script>
+</head>
+<body>
+<title>NLC TOP</title>
+<h1>NLC TOP</h1>
+<input type="button" value="PASS" onclick="gate();">
+<div id="wrapper">
+<div id="left">
+<h3>左側</h3>
+PASSに有効なパスワード入れたら、アレできるらしいで、おーん。
+</div>
+<div id="main">
+<h3>真ん中</h3>
+間違えたPASS入れたらあかんわ。そらそうよ。
+</div>
+<div id="right">
+<h3>右側</h3>
+あんまり間違えると、アクセスできへんようになるで。気ぃつけや。おーん。
+</body>
+</html>

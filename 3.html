@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="3.css">
+<script type="text/javascript">
+function gate(){
+   // ▼ユーザの入力を求める
+   var UserInput = prompt("Enter Pass","");
+   // ▼入力内容をチェック
+   if( /\W+/g.test(UserInput) ) {
+      // ▼半角英数字以外の文字が存在したらエラー
+      alert("Some letters are not supported.");
+   }
+   // ▼キャンセルをチェック
+   else if( UserInput != null ) {
+      // ▼入力内容からファイル名を生成して移動
+      location.href = UserInput + ".html";
+   }
+}
+</script>
+</head>
+<body>
+<title>NLC-Lib3</title>
+<h1>NLC-Lib3</h1>
+<input type="button" value="PASS" onclick="gate();">
+<div id="wrapper">
+<div id="left">
+<h3>左側</h3>
+ここはいろいろ書く。
+</div>
+<div id="main">
+<h3>真ん中</h3>
+連絡事項や。
+</div>
+<div id="right">
+<h3>右側。</h3>
+ここはコメントフォーム。
+<h4>テストフォームtestform</h4>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfKOcTfMLdGfu3UFuFqV0hKMEgxCiIZFEtPPtzs9h3U_quu-g/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
+<p><input name="entry.950319550" placeholder="名前" required></p>
+<p><input name="entry.2137014826" placeholder="メールアドレス（任意）" type="email"></p>
+<p><textarea name="entry.64784198" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
+<input type="submit" id="submitbutton" value="送信">
+</form>
+<iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
+
+<script type="text/javascript">
+var NGComments = ["優勝"]; // 簡易的なNGワードの設定
+var regex = new RegExp(NGComments.join("|"));
+function test(wcheck) {
+	if (wcheck.match(regex) != null) {
+		alert("ERROR: アレやアレ、おーん。");
+		return false;
+	}
+	document.getElementById("submitbutton").disabled = true;
+	textareas = document.getElementsByTagName('textarea');
+	for(var i=0 ;i < textareas.length ;i ++ ){
+		textareas[i].value = textareas[i].value.replace( /</g ,'&lt;' );
+	}
+	inputs = document.getElementsByTagName('input');
+	for(var i=0 ;i < inputs.length ;i ++ ){
+		inputs[i].value = inputs[i].value.replace( /</g ,'&lt;' );
+	}
+	return submitted=!0;
+}
+</script>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<div id="comments"></div>
+<script>
+d3.csv("https://docs.google.com/spreadsheets/d/1NYKhxoodiZZRQw-fwpMtJ9Q8aGjhP9eEzz422Pa3pF8/export?format=csv&range=A3:D", function(error, data){
+	var text = "";
+	for(var i=0; i<data.length; i++){
+		text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
+	}
+	d3.select("#comments").html(text);
+});
+</script>
+</div>
+</div>
+</body>
+</html>
