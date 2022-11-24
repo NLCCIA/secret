@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="1.css">
+<link rel="stylesheet" type="text/css" href="3.css">
 <script type="text/javascript">
 function gate(){
    // ▼ユーザの入力を求める
@@ -21,8 +21,8 @@ function gate(){
 </script>
 </head>
 <body>
-<title>NLC-Lib1</title>
-<h1>NLC-Lib1</h1>
+<title>NLC-Lib3</title>
+<h1>NLC-Lib3</h1>
 <input type="button" value="PASS" onclick="gate();">
 <div id="wrapper">
 <div id="left">
@@ -37,7 +37,7 @@ function gate(){
 <h3>右側。</h3>
 ここはコメントフォーム。
 <h4>テストフォームtestform</h4>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSfLL2_T5Tm7ctr1AwIGXUjYgqBMIz0TIWyWbJOBXrbgWmZCIw/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfKOcTfMLdGfu3UFuFqV0hKMEgxCiIZFEtPPtzs9h3U_quu-g/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
 <p><input name="entry.950319550" placeholder="名前" required></p>
 <p><input name="entry.2137014826" placeholder="メールアドレス（任意）" type="email"></p>
 <p><textarea name="entry.64784198" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
@@ -69,7 +69,7 @@ function test(wcheck) {
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <div id="comments"></div>
 <script>
-d3.csv("https://docs.google.com/spreadsheets/d/1dV67py-0xajj0M2SERd01YWe6CGvAkHr0VPtpXCCSeY/export?format=csv&range=A3:D", function(error, data){
+d3.csv("https://docs.google.com/spreadsheets/d/1NYKhxoodiZZRQw-fwpMtJ9Q8aGjhP9eEzz422Pa3pF8/export?format=csv&range=A3:D", function(error, data){
 	var text = "";
 	for(var i=0; i<data.length; i++){
 		text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
