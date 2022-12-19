@@ -3,27 +3,11 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="index.css">
-<script type="text/javascript">
-function gate(){
-   // ▼ユーザの入力を求める
-   var UserInput = prompt("Enter Pass","");
-   // ▼入力内容をチェック
-   if( /\W+/g.test(UserInput) ) {
-      // ▼半角英数字以外の文字が存在したらエラー
-      alert("Some letters are not supported.");
-   }
-   // ▼キャンセルをチェック
-   else if( UserInput != null ) {
-      // ▼入力内容からファイル名を生成して移動
-      location.href = UserInput + ".html";
-   }
-}
-</script>
 </head>
 <body>
 <title>NLC LITERATURE</title>
 <h1>NLC LITERATURE</h1>
-<input type="button" value="PASS" onclick="gate();">
+<a href=1.html>詳細ページ</a>
 <div id="wrapper">
 <div id="left">
 <h3>左側</h3>
