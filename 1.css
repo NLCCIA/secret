@@ -30,6 +30,13 @@ background: #ffffff;
 text-align: left;
 /*margin-bottom: 0px;*/
 }
+.hyou {
+float: left;
+width: 100%;
+background: #ffffff;
+text-align: center;
+/*margin-bottom: 0px;*/
+}
 #right {
 list-style-position: inside;
 float: left;
