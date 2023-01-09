@@ -1,1 +1,0 @@
-IDRViewer.config = {"pagecount":1,"title":"","author":"田村　謙悟","subject":"","keywords":"","creator":"Word 用 Acrobat PDFMaker 22","producer":"Adobe PDF Library 22.3.58","creationdate":"D:20230109120746+09'00'","moddate":"D:20230109120750+09'00'","trapped":"","fileName":"シフト印刷用版.pdf","bounds":[[1286,1818]],"bookmarks":[],"thumbnailType":"jpg","pageType":"html","pageLabels":[]};
