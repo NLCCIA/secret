@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="index.css">
+<script>
+function audio2() {
+    document.getElementById('btn_audio2').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio2').play(); //クリックしたら音を再生
+}
+function audio3() {
+    document.getElementById('btn_audio3').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio3').play(); //クリックしたら音を再生
+}
+function audio4() {
+    document.getElementById('btn_audio4').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio4').play(); //クリックしたら音を再生
+}
+function audio5() {
+    document.getElementById('btn_audio5').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio5').play(); //クリックしたら音を再生
+}
+function mute3() {
+    if (document.getElementById('btn_audio3').muted) {
+        document.getElementById('btn_audio3').muted = false;
+    } else {
+        document.getElementById('btn_audio3').muted = true;
+    }
+}
+function mute4() {
+    if (document.getElementById('btn_audio4').muted) {
+        document.getElementById('btn_audio4').muted = false;
+    } else {
+        document.getElementById('btn_audio4').muted = true;
+    }
+}
+function mute5() {
+    if (document.getElementById('btn_audio5').muted) {
+        document.getElementById('btn_audio5').muted = false;
+    } else {
+        document.getElementById('btn_audio5').muted = true;
+    }
+}
+</script>
+<script>
+function displayInputs() {
+	var kendai = document.getElementById("kendai").value;
+	document.getElementById("result").innerHTML = "「" + kendai + "」"
+	}
+</script>
+</head>
+<body>
+<title>俳句甲子園模擬戦</title>
+<h1>俳句甲子園模擬戦　<input type="button" value="PASS" onclick="gate();"></h1>
+<div class="contents">
+<div class="btn" onclick="audio3()">入場</div>
+<div class="btn" onClick="mute3()">入場ミュート</div>
+<div class="btn" onclick="audio4()">退場</div>
+<div class="btn" onClick="mute4()">退場ミュート</div>
+<div class="btn" onclick="audio5()">待機</div>
+<div class="btn" onClick="mute5()">待機ミュート</div>
+　　　　
+<a href="index.html" class="btn">TOP</a>
+<a href="1.html" class="btn">先鋒戦</a>
+<a href="2.html" class="btn">中堅戦</a>
+<a href="3.html" class="btn">大将戦</a>
+</div>
+<audio id="btn_audio2"><source src="hikou.mp3" type="audio/mp3"></audio>
+<audio id="btn_audio3"><source src="in.mp3" type="audio/mp3"></audio>
+<audio id="btn_audio4"><source src="out.mp3" type="audio/mp3"></audio>
+<audio id="btn_audio5"><source src="wait.mp3" type="audio/mp3"></audio>
+<br>
+<div id="wrapper">
+ <div id="left2">
+  <h2>紅</h2>
+   <div class="left"> 
+    <div class="ku">
+     <div id="left" class="kunakami">
+     <button id="btnA" onclick="audio2()">紅　披講</button>
+     </div>
+    </div>
+  </div>
+ </div>
+<div id="main">
+<h1>中堅戦</h1><h2>兼題<br><div id="kendaiutu"><div id="result"></div></div></h2>
+<br>
+<form>
+<label for="kendai"></label>
+<input type="text" id="kendai" name="kendai" placeholder="兼題を入力"><br>
+<input type="button" value="OK" onclick="displayInputs()">
+</form>
+</div>
+<div id="right2">
+<h2>白</h2>
+  <div class="ku">
+   <div id="right" class="kunakami">
+   <button id="btnB" onclick="audio2()">白　披講</button>
+  </div>
+ </div>
+</div>
+</div>
+<script>
+    const left = document.getElementById('left');
+    const center = document.getElementById('center');
+    const right = document.getElementById('right');
+    const btnA = document.getElementById('btnA');
+    const btnB = document.getElementById('btnB');
+
+    let redShown = false;
+    let whiteShown = false;
+
+    function showRed() {
+      if (!redShown) {
+        redShown = true;
+        left.textContent = "赤";
+        btnA.style.display = "none";
+      }
+    }
+
+    function showWhite() {
+      if (!whiteShown) {
+        whiteShown = true;
+        right.textContent = "白" ;
+        btnB.style.display = "none";
+      }
+    }
+    btnA.addEventListener('click', showRed);
+    btnB.addEventListener('click', showWhite);
+</script>
+</body>
+</html>
