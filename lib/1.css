@@ -8,14 +8,14 @@ color: black;
 #left {
 list-style-position: inside;
 float: left;
-width: 18%;
+width: 20%;
 height: 100%;
 background: #e0ffff;
 text-align: left;
 color: black;
 }
 #main {
-float: center;
+float: left;
 width: 70%;
 height: 100%;
 background: #ffffe0;
