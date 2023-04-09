@@ -10,7 +10,7 @@ list-style-position: inside;
 float: left;
 width: 20%;
 height: 100%;
-background: #E0FFFF;
+background: #e0ffff;
 text-align: left;
 color: black;
 }
@@ -18,7 +18,7 @@ color: black;
 float: center;
 width: 70%;
 height: 100%;
-background: #FFFFE0;
+background: #ffffe0;
 text-align: center;
 /*margin-bottom: 0px;*/
 }
@@ -27,7 +27,7 @@ list-style-position: inside;
 float: left;
 width: 10%;
 height: 100%;
-background: #FFF8DC;
+background: #fff8dc;
 text-align: left;
 }
 
