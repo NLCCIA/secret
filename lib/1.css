@@ -3,7 +3,7 @@
 h1 {
 font-weight:600;
 font-size: 2.5em;
-color: white;
+color: black;
 }
 #left {
 list-style-position: inside;
@@ -34,7 +34,7 @@ text-align: left;
 
 body {
 font-family: 'Noto Sans JP', sans-serif;
-background-color: green;
+background-color: white;
 font-size: 1em;
     }
 
