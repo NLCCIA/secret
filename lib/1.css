@@ -8,26 +8,26 @@ color: white;
 #left {
 list-style-position: inside;
 float: left;
-width: 25%;
+width: 20%;
 height: 100%;
-background: #ff0000;
+background: #E0FFFF;
 text-align: left;
 color: black;
 }
 #main {
-float: left;
-width: 50%;
+float: center;
+width: 70%;
 height: 100%;
-background: #ffff00;
-text-align: left;
+background: #FFFFE0;
+text-align: center;
 /*margin-bottom: 0px;*/
 }
 #right {
 list-style-position: inside;
 float: left;
-width: 25%;
+width: 10%;
 height: 100%;
-background: #00ffff;
+background: #FFF8DC;
 text-align: left;
 }
 
