@@ -42,6 +42,8 @@ function mute5() {
     }
 }
 </script>
+	<script src="js/xlsx.js"></script>
+	<script src="js/test001.js"></script>
 <script>
 function displayInputs() {
 	var kendai = document.getElementById("kendai").value;
@@ -108,7 +110,7 @@ function displayInputs() {
     function showRed() {
       if (!redShown) {
         redShown = true;
-        left.textContent = "r3";
+        left.textContent = r3;
         btnA.style.display = "none";
       }
     }
