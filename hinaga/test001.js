@@ -6,7 +6,7 @@ let Sheet1          = workbook.Sheets[sheet_name_list[0]]  // シート1をデ�
 let Sheet1_json     = XLSX.utils.sheet_to_json( Sheet1 )   // シート1のデータをJSONパースします
 
 // (例)シート1のセルA1の値をコンソールに出力します
-let Sheet1B2        = Sheet1['B2'].v
+var Sheet1B2        = Sheet1['B2'].v
 console.log( `紅　先鋒：\n${Sheet1B2}` )
 let Sheet1C2        = Sheet1['C2'].v
 console.log( `紅　中堅：\n${Sheet1C2}` )
