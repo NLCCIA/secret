@@ -5,7 +5,6 @@ var sheet_name_list = workbook.SheetNames
 var Sheet1          = workbook.Sheets[sheet_name_list[0]]  // シート1をデータを取得します
 var Sheet1_json     = XLSX.utils.sheet_to_json( Sheet1 )   // シート1のデータをJSONパースします
 
-// (例)シート1のセルA1の値をコンソールに出力します
 var r1        = Sheet1['B2'].v
 console.log( `紅　先鋒：\n${Sheet1B2}` )
 var r2        = Sheet1['C2'].v
