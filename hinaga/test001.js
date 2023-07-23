@@ -1,9 +1,9 @@
-//let XLSX     = require('xlsx')
-let workbook = XLSX.readFile('haiku.xlsx')
+var XLSX
+var workbook = XLSX.readFile('haiku.xlsx')
 
-let sheet_name_list = workbook.SheetNames
-let Sheet1          = workbook.Sheets[sheet_name_list[0]]  // シート1をデータを取得します
-let Sheet1_json     = XLSX.utils.sheet_to_json( Sheet1 )   // シート1のデータをJSONパースします
+var sheet_name_list = workbook.SheetNames
+var Sheet1          = workbook.Sheets[sheet_name_list[0]]  // シート1をデータを取得します
+var Sheet1_json     = XLSX.utils.sheet_to_json( Sheet1 )   // シート1のデータをJSONパースします
 
 // (例)シート1のセルA1の値をコンソールに出力します
 var r1        = Sheet1['B2'].v
