@@ -1,4 +1,4 @@
-let XLSX     = require('xlsx')
+//let XLSX     = require('xlsx')
 let workbook = XLSX.readFile('haiku.xlsx')
 
 let sheet_name_list = workbook.SheetNames
