@@ -1,4 +1,4 @@
-var XLSX
+var XLSX;
 var workbook = XLSX.readFile('haiku.xlsx')
 
 var sheet_name_list = workbook.SheetNames
