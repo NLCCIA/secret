@@ -1,5 +1,5 @@
 var XLSX;
-var workbook = XLSX.readFile('haiku.xlsx')
+var workbook = XLSX.readFile('haiku.xlsx');
 
 var sheet_name_list = workbook.SheetNames
 var Sheet1          = workbook.Sheets[sheet_name_list[0]]  // シート1をデータを取得します
