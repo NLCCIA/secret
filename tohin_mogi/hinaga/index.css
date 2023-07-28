@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+.contents {
+    display: flex;
+    width: 100%;
+}
+.btn {
+display: flex;
+    box-sizing: border-box;
+    background-color: #cbfd23;
+    color: #000000;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 10%;
+}
+
+.box {
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#btnA, #btnB {
+width: 100px;
+height: 50px;
+}
+h1 {
+font-weight:600;
+font-size: 3em;
+color: black;
+}
+h2 {
+font-weight:600;
+font-size: 2em;
+color: black;
+}
+#left {
+list-style-position: inside;
+text-align: center;
+float: center;
+background: #ff99ff;
+}
+#main {
+float: left;
+text-align: center;
+width: 19%;
+height: 800px;
+background: #ffffff;
+}
+#right {
+list-style-position: inside;
+text-align: center;
+float: center;
+background: #ffffff;
+}
+#left2 {
+list-style-position: inside;
+text-align: center;
+float: left;
+width: 40%;
+height: 800px;
+background: #ff99ff;
+border: 2px solid #000000;
+}
+#right2 {
+list-style-position: inside;
+text-align: center;
+float: right;
+width: 40%;
+height: 800px;
+background: #ffffff;
+border: 2px solid #000000;
+}
+body {
+font-family: 'Noto Sans JP', sans-serif;
+background-color: white;
+}
+.ku {
+text-align: center;
+}
+.kunakami {
+font-weight:700;
+font-size: 2.5em;
+color: black;
+-ms-writing-mode: tb-rl;
+writing-mode: vertical-rl;
+text-align: left;
+display: inline-block;
+}
