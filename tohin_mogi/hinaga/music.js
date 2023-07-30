@@ -2,17 +2,10 @@ function audio2() {
     document.getElementById('btn_audio2').currentTime = 0; //連続クリックに対応
     document.getElementById('btn_audio2').play(); //クリックしたら音を再生
 }
-function audio3() {
-     if (document.getElementById('btn_audio3').muted) {
-        document.getElementById('btn_audio3').muted = false;
-        document.getElementById('btn_audio3').currentTime = 0; //連続クリックに対応
-        document.getElementById('btn_audio3').play(); //クリックしたら音を再生
-        document.getElementById('btn_audio3').currentTime = 0;
-    } else {
-        document.getElementById('btn_audio3').muted = true;
-        document.getElementById('btn_audio3').currentTime = 0;
-    }
-    }
+function audio4() {
+    document.getElementById('btn_audio3').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio3').play(); //クリックしたら音を再生
+}
 function audio4() {
     document.getElementById('btn_audio4').currentTime = 0; //連続クリックに対応
     document.getElementById('btn_audio4').play(); //クリックしたら音を再生
@@ -24,10 +17,8 @@ function audio5() {
 function mute3() {
     if (document.getElementById('btn_audio3').muted) {
         document.getElementById('btn_audio3').muted = false;
-        document.getElementById('btn_audio3').currentTime = 0;
     } else {
         document.getElementById('btn_audio3').muted = true;
-        document.getElementById('btn_audio3').currentTime = 0;
     }
 }
 function mute4() {
