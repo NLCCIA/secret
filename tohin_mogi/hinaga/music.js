@@ -6,11 +6,11 @@ function audio3() {
   let flag = 0 
   if (flag == 0) { 
     document.getElementById('btn_audio3').play(); //クリックしたら音を再生
-    flag += 1
+    flag == 1
   } else {
   document.getElementById('btn_audio3').pause();
   document.getElementById('btn_audio3').currentTime = 0; 
-    flag -= 1
+    flag == 0
    } 
    }
 function audio4() {
